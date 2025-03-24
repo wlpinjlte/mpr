@@ -1,0 +1,27 @@
+Size: 1.000000, Przepustowość: 6.677947 Mbit/s, time is 0.001142
+Opóźnienie: 0.001142 ms
+Size: 2.000000, Przepustowość: 12.511583 Mbit/s, time is 0.001220
+Size: 4.000000, Przepustowość: 26.219675 Mbit/s, time is 0.001164
+Size: 8.000000, Przepustowość: 52.458505 Mbit/s, time is 0.001163
+Size: 16.000000, Przepustowość: 105.050277 Mbit/s, time is 0.001162
+Size: 32.000000, Przepustowość: 12.732977 Mbit/s, time is 0.019174
+Size: 64.000000, Przepustowość: 0.351303 Mbit/s, time is 1.389916
+Size: 128.000000, Przepustowość: 8.857902 Mbit/s, time is 0.110248
+Size: 256.000000, Przepustowość: 1549.671202 Mbit/s, time is 0.001260
+Size: 512.000000, Przepustowość: 3099.612930 Mbit/s, time is 0.001260
+Size: 1024.000000, Przepustowość: 5422.112781 Mbit/s, time is 0.001441
+Size: 2048.000000, Przepustowość: 9574.259489 Mbit/s, time is 0.001632
+Size: 4096.000000, Przepustowość: 14522.374215 Mbit/s, time is 0.002152
+Size: 8192.000000, Przepustowość: 1301.669186 Mbit/s, time is 0.048015
+Size: 16384.000000, Przepustowość: 25636.918475 Mbit/s, time is 0.004876
+Size: 32768.000000, Przepustowość: 4733.307650 Mbit/s, time is 0.052817
+Size: 65536.000000, Przepustowość: 8940.742174 Mbit/s, time is 0.055924
+Size: 131072.000000, Przepustowość: 9354.140384 Mbit/s, time is 0.106905
+Size: 262144.000000, Przepustowość: 9142.549786 Mbit/s, time is 0.218757
+Size: 524288.000000, Przepustowość: 8147.754642 Mbit/s, time is 0.490933
+Size: 1048576.000000, Przepustowość: 3616.921428 Mbit/s, time is 2.211826
+Size: 2097152.000000, Przepustowość: 4291.762536 Mbit/s, time is 3.728072
+Size: 4194304.000000, Przepustowość: 1038.419287 Mbit/s, time is 30.816069
+Size: 8388608.000000, Przepustowość: 678.955253 Mbit/s, time is 94.262471
+Size: 16777216.000000, Przepustowość: 800.175186 Mbit/s, time is 159.964971
+Size: 33554432.000000, Przepustowość: 995.257845 Mbit/s, time is 257.219776

@@ -32,8 +32,8 @@ plt.xscale('log')
 
 # Tytuł i etykiety
 plt.title('Size vs Bandwidth (Log Scale)')
-plt.xlabel('Size (Log Scale)')
-plt.ylabel('Bandwidth')
+plt.xlabel('Size (Log Scale) [Bit]')
+plt.ylabel('Bandwidth [MB/s]')
 
 # Legenda
 plt.legend()

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
+# import seaborn as sns
 
 # Wczytaj dane z CSV
 df = pd.read_csv('data_pi_2.csv')

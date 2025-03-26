@@ -20,21 +20,25 @@ def compute_statistics(df, problem_size, scaling):
 
 
 # Funkcja do obliczania przyspieszenia (speedup), efektywności (efficiency) i części sekwencyjnej (serial fraction)
-def calculate_metrics(stats):
+def calculate_metrics(stats, scaling):
     # Przyspieszenie (Speedup)
-    stats['speedup'] = stats['mean_time'].transform(lambda x: x.iloc[0] / x)
+    if scaling == 'weak':
+        stats['speedup'] = stats['mean_time'].transform(lambda x: (x.iloc[0] * (x.index + 1)) / x)
+    else:
+        stats['speedup'] = stats['mean_time'].transform(lambda x: x.iloc[0] / x)
 
     # Efektywność (Efficiency)
     stats['efficiency'] = stats['speedup'] / stats['threads']
-
+    print(stats['mean_time'])
+    print(stats['speedup'])
     # Część sekwencyjna (Serial Fraction)
-    stats['serial_fraction'] = 1 - (1 / stats['speedup'])
+    stats['serial_fraction'] = stats['speedup'].transform(lambda x: (1 / x - 1 / (x.index + 1)) / (1 - 1 / (x.index + 1)))
+    stats['serial_fraction'] = stats['serial_fraction']
     return stats
 
 
 # Lista rozmiarów problemów
-# problem_sizes = [1000, 31623, 1000000]
-problem_sizes = [10000, 1000000, 100000000]
+problem_sizes = [100000, 10000000, 1000000000]
 
 # Przygotowanie wykresów
 fig, axs = plt.subplots(2, 2, figsize=(15, 12))  # 4 wykresy na jednym zestawie
@@ -50,7 +54,7 @@ for scaling in scalings:
     for i, problem_size in enumerate(problem_sizes):
         # Oblicz statystyki dla danego rozmiaru problemu i skalowania
         stats = compute_statistics(df, problem_size, scaling)
-        stats = calculate_metrics(stats)
+        stats = calculate_metrics(stats, scaling)
         print(f"Obliczenia dla {scaling} skalowania, Problem size {problem_size}")
         print(stats)
 
@@ -70,7 +74,7 @@ for scaling in scalings:
     # Ustawienia dla wykresów
     axs[0, 0].set_title(f'Czas vs Liczba procesorów ({scaling} scaling)')
     axs[0, 0].set_xlabel('Liczba procesorów')
-    axs[0, 0].set_ylabel('Czas')
+    axs[0, 0].set_ylabel('Czas[s]')
     axs[0, 0].legend()
 
     axs[0, 1].set_title(f'Przyspieszenie vs Liczba procesorów ({scaling} scaling)')
